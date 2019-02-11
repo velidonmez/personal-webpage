@@ -1,43 +1,69 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger">
-      <span class="d-block d-lg-none">Veli Dönmez</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="veli dönmez">
-      </span>
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link to="/" class="nav-link">About</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/experience" class="nav-link">Experience</router-link>
-        </li>
-      </ul>
+  <div class="navcontainer">
+    <div class="mobile-nav d-lg-none">
+      <div v-if="this.$route.path === '/experience'">
+        <router-link to="/" class="btn fixed-top">Navigate to About Page</router-link>
+      </div>
+      <div v-else>
+        <router-link to="/experience" class="btn fixed-top">Navigate to Experience Page</router-link>
+      </div>
     </div>
-  </nav>
+    <nav
+      class="d-none d-lg-flex navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand js-scroll-trigger">
+        <span class="d-block d-lg-none">Veli Dönmez</span>
+        <span class="d-none d-lg-block">
+          <img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="../assets/img/profile.jpg"
+            alt="veli dönmez"
+          >
+        </span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/experience" class="nav-link">Experience</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
 export default {
+  data: () => {
+    return {
+      btnName: this.$route.path
+    }
+  },
   name: 'Navbar'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.mobile-nav .btn{
+  background-color: #03396c;
+  color: white;
+}
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
