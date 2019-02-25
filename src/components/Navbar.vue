@@ -7,16 +7,15 @@
       <div v-else>
         <router-link to="/experience" class="btn fixed-top">{{ $t('nav.mobileExpBtn') }}</router-link>
       </div>
+      <div class="flags-custom">
+        <country-flag class="flag-custom" @click.native="changeLocale('tr')" country='tr' size='small'/>
+        <country-flag class="flag-custom" @click.native="changeLocale('en')" country='us' size='small'/>
+      </div>
     </div>
     <nav
       class="d-none d-lg-flex navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
-      <div>
-        <button v-for="entry in languages" :key="entry.title" @click="changeLocale(entry.language)">
-            <flag :iso="entry.flag" v-bind:squared=false /> {{entry.title}}
-        </button>
-      </div>
       <a class="navbar-brand js-scroll-trigger">
         <span class="d-block d-lg-none">{{ $t('about.name') }}</span>
         <span class="d-none d-lg-block">
@@ -46,6 +45,12 @@
           <li class="nav-item">
             <router-link to="/experience" class="nav-link">{{ $t('nav.experience') }}</router-link>
           </li>
+          <li>
+            <div>
+              <country-flag @click.native="changeLocale('tr')" country='tr' size='small'/>
+              <country-flag @click.native="changeLocale('en')" country='us' size='small'/>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
@@ -53,6 +58,9 @@
 </template>
 
 <script>
+import CountryFlag from 'vue-country-flag'
+import i18n from '@/plugins/i18n'
+
 export default {
   data: () => {
     return {
@@ -63,12 +71,24 @@ export default {
       ]
     }
   },
-  name: 'Navbar'
+  name: 'Navbar',
+  components: {
+    CountryFlag
+  },
+  methods: {
+    changeLocale (locale) {
+      i18n.locale = locale
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.flags-custom{
+  margin-top: -40px!important;
+  margin-bottom: -75px!important;
+}
 .mobile-nav .btn{
   background-color: #03396c;
   color: white;

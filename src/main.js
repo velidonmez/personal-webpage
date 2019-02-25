@@ -3,15 +3,12 @@ import App from './App.vue'
 import router from './router'
 import jQuery from 'jquery'
 import i18n from '@/plugins/i18n'
-import FlagIcon from 'vue-flag-icon/index'
 
 import 'bootstrap'
 import 'popper.js'
 import './assets/app.scss'
 
 window.$ = window.jQuery = jQuery
-
-Vue.use(FlagIcon)
 Vue.config.productionTip = false
 
 new Vue({
