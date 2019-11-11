@@ -1,5 +1,5 @@
 <template>
-  <div class="experience">
+<div class="experience">
     <Navbar></Navbar>
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
