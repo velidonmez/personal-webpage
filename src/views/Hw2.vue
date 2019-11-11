@@ -57,6 +57,7 @@ export default {
       console.log('wordClickHandler', name, value, vm)
     },
     trigger () {
+      this.defaultWords = []
       this.words = this.splitText(this.text).sort()
       console.log(this.words)
       this.wordsObj = this.countWordsAndEliminateDuplicates(this.words)
