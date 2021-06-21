@@ -1,7 +1,7 @@
 {
   "en": {
     "about": {
-      "aboutMe": "Studying computer engineering at Uskudar University, Istanbul.",
+      "aboutMe": "Computer Engineer graduate works as front-end developer.",
       "interested": "Interested in & Trying to master",
       "name": "Veli Dönmez",
       "city": "istanbul",
@@ -23,8 +23,8 @@
   },
   "tr": {
     "about": {
-      "aboutMe": "Bilgisayar Mühendisliği, Üsküdar Üniversitesi, Istanbul.",
-      "interested": "İLGİ Alanları",
+      "aboutMe": "Bilgisayar Mühendisi, Front-End Developer",
+      "interested": "İlgi Alanları",
       "name": "Veli Dönmez",
       "city": "istanbul",
       "mail": "velidonmez@mail.com",

@@ -7,7 +7,7 @@
           {{ $t('about.name') }}
         </h2>
         <div class="subheading">
-          {{ $t('about.city') }} ·
+<!--          {{ $t('about.city') }} ·-->
           <a :href="'mailto:'+$t('about.mail')" title="mail to veli dönmez">{{ $t('about.mail') }}</a>
         </div>
         <p class="lead mb-5">{{ $t('about.aboutMe') }}</p>
@@ -18,16 +18,22 @@
           <a title="github of veli dönmez" :href="$t('about.github')" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a title="twitter of veli dönmez" :href="$t('about.twitter')" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a title="facebook of veli dönmez" :href="$t('about.facebook')" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
+<!--          <a title="twitter of veli dönmez" :href="$t('about.twitter')" target="_blank">-->
+<!--            <i class="fab fa-twitter"></i>-->
+<!--          </a>-->
+<!--          <a title="facebook of veli dönmez" :href="$t('about.facebook')" target="_blank">-->
+<!--            <i class="fab fa-facebook-f"></i>-->
+<!--          </a>-->
         </div>
         <hr class="m-5">
         <div class="subheading mb-3">{{ $t('about.interested') }}</div>
         <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-vuejs" title="vuejs"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-node-js" title="node.js"></i>
+          </li>
           <li class="list-inline-item">
             <i class="fab fa-html5" title="html5"></i>
           </li>
@@ -36,15 +42,6 @@
           </li>
           <li class="list-inline-item">
             <i class="fab fa-js-square" title="javascript"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-vuejs" title="vuejs"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-node-js" title="node.js"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-npm" title="npm"></i>
           </li>
         </ul>
       </div>

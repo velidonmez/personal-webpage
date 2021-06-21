@@ -7,12 +7,22 @@
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
+            <h3 class="mb-0">Front End Developer - Remote</h3>
+            <div class="subheading mb-3">Cuz Translation - TORONTO</div>
+            <p>Developing web and mobile applications for customers and translators.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Dec 2019 - Present</span>
+          </div>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
             <h3 class="mb-0">Junior Web Developer(Part-Time)</h3>
             <div class="subheading mb-3">Uskudar University, ISTANBUL</div>
             <p>Website Control – Content Adding</p>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">Oct 2018 - Present</span>
+            <span class="text-primary">Oct 2018 - Oct 2019</span>
           </div>
         </div>
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
